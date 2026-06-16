@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evaluation | 第二段階実験</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/">
+        <span>Olfactory Gallery Study</span>
+      </a>
+      <nav>
+        <a href="/">Form</a>
+        <a href="/admin.html">Admin</a>
+      </nav>
+      <div class="header-progress" aria-hidden="true">
+        <span></span>
+      </div>
+    </header>
+
+    <main class="shell evaluation-page">
+      <section class="hero compact">
+        <h1>評価体系</h1>
+        <p>
+          この実験では、香りの良し悪しではなく、香りの選び方が作品体験をどのように支えるかを評価します。
+        </p>
+      </section>
+
+      <section class="card evaluation-summary">
+        <div>
+          <span class="section-kicker">01</span>
+          <h2>評価の目的</h2>
+        </div>
+        <p>
+          A〜Dの香りは、それぞれ異なる香りの選定ロジックを表しています。
+          そのため、ユーザーの回答は「どの香りが好きか」ではなく、
+          「どの選び方が作品体験に有効か」を判断するために使用します。
+        </p>
+        <div class="logic-strip">
+          <span>同じ作品</span>
+          <span>同じ時間</span>
+          <span>同じ環境</span>
+          <strong>変えるのは香りだけ</strong>
+        </div>
+      </section>
+
+      <section class="evaluation-grid">
+        <article class="card metric-card">
+          <span class="section-kicker">02</span>
+          <h2>作品適合性</h2>
+          <p>
+            香りと作品の関係が自然に感じられ、鑑賞の邪魔になっていないかを確認します。
+          </p>
+          <div class="formula">
+            <strong>作品適合性スコア</strong>
+            <span>（適合性 + 低違和感）÷ 2</span>
+          </div>
+          <ul>
+            <li>適合性：作品に合っていると感じたか</li>
+            <li>低違和感：違和感が少なかったか</li>
+            <li>違和感は反対方向の評価なので、6 - 違和感で換算する</li>
+          </ul>
+        </article>
+
+        <article class="card metric-card">
+          <span class="section-kicker">03</span>
+          <h2>体験変化</h2>
+          <p>
+            香りによって作品の見え方、感じ方、意味の受け取り方が変化したかを確認します。
+          </p>
+          <div class="formula">
+            <strong>体験変化スコア</strong>
+            <span>（没入感 + 印象変化 + 解釈変化）÷ 3</span>
+          </div>
+          <ul>
+            <li>没入感：作品の世界に入り込みやすくなったか</li>
+            <li>印象変化：作品の印象が変わったか</li>
+            <li>解釈変化：作品の意味や物語が変わったように感じたか</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="card evaluation-section">
+        <span class="section-kicker">04</span>
+        <h2>補助的に見る評価</h2>
+        <p>
+          空間想像、記憶連想、複数選択、自由記述は、最終的なランキングを決めるためだけでなく、
+          なぜその香りが有効だったのかを説明するために使用します。
+        </p>
+        <div class="reason-grid">
+          <div>
+            <strong>空間想像</strong>
+            <p>場所、空気、湿度などを想像しやすくなったかを見る。</p>
+          </div>
+          <div>
+            <strong>記憶連想</strong>
+            <p>個人的な記憶や別の場所を思い出したかを見る。</p>
+          </div>
+          <div>
+            <strong>自由記述</strong>
+            <p>数字だけでは説明できない変化や違和感の理由を確認する。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card evaluation-section">
+        <span class="section-kicker">05</span>
+        <h2>最終比較の使い方</h2>
+        <p>
+          各香りの5段階評価で個別の反応を記録し、最後の比較質問で4種類の中での相対的な判断を確認します。
+          この二つが一致する場合、その結果はより安定した傾向として扱えます。
+        </p>
+        <div class="comparison-map">
+          <div>
+            <strong>最も合っていた香り</strong>
+            <span>作品適合性スコアと照合する</span>
+          </div>
+          <div>
+            <strong>最も印象を変化させた香り</strong>
+            <span>体験変化スコアと照合する</span>
+          </div>
+          <div>
+            <strong>最も違和感があった香り</strong>
+            <span>適合性を下げる要因として確認する</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="card conclusion-card">
+        <span class="section-kicker">06</span>
+        <h2>結論の出し方</h2>
+        <div class="conclusion-grid">
+          <div>
+            <strong>どの香りの選び方が、作品に自然に合うのか</strong>
+            <p>
+              作品適合性スコアと「最も合っていた香り」の選択数を合わせて判断します。
+            </p>
+          </div>
+          <div>
+            <strong>どの香りの選び方が、作品体験を変化させるのか</strong>
+            <p>
+              体験変化スコアと「最も印象を変化させた香り」の選択数を合わせて判断します。
+            </p>
+          </div>
+        </div>
+        <p class="evaluation-note">
+          したがって、最終結論は「一番良い香り」ではなく、
+          「作品との適合性が高い香り」と「作品印象を変化させる香り」を分けて考える。
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

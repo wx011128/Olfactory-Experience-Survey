@@ -1,0 +1,12 @@
+{
+  "name": "olfactory-experience-survey",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "start": "vercel dev"
+  },
+  "dependencies": {
+    "@vercel/blob": "^2.4.0"
+  }
+}

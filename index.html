@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>第二段階実験 | 香りと鑑賞体験</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/">
+        <span>Olfactory Gallery Study</span>
+      </a>
+      <nav>
+        <a href="/evaluation.html">Evaluation</a>
+        <a href="/admin.html">Admin</a>
+      </nav>
+      <div class="header-progress" aria-hidden="true">
+        <span id="headerProgressBar"></span>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="hero">
+        <h1>香りは作品体験をどう変えるのか。</h1>
+        <p>
+          Claude Monet《睡蓮》を対象に、4種類の香りを匿名条件 A〜D として体験し、
+          鑑賞者の印象・記憶・解釈の変化を記録します。
+        </p>
+      </section>
+
+      <form id="experimentForm" class="study-form">
+        <section class="card step is-active" data-title="参加者情報" data-kind="form">
+          <div class="section-kicker">01</div>
+          <h2>参加者情報</h2>
+          <div class="field-grid">
+            <label>
+              年齢層
+              <select name="ageGroup" required>
+                <option value="">選択してください</option>
+                <option>10代</option>
+                <option>20代</option>
+                <option>30代</option>
+                <option>40代以上</option>
+              </select>
+            </label>
+            <label>
+              香りへの敏感さ
+              <select name="scentSensitivity" required>
+                <option value="">選択してください</option>
+                <option>低い</option>
+                <option>普通</option>
+                <option>高い</option>
+                <option>分からない</option>
+              </select>
+            </label>
+          </div>
+          <p class="note">
+            香りは A、B、C、D の順番で提示されます。香りの名前は実験後に説明します。
+          </p>
+        </section>
+
+        <section class="formal-start step" data-title="正式体験開始" data-kind="intro">
+          <h1>これから正式な体験に入ります。</h1>
+          <p>
+            各条件では、作品画像を10秒間見ながら香りを感じてください。
+            その後、自動的に質問ページへ進むので、感じたことを記入してください。
+          </p>
+        </section>
+
+        <div id="dynamicSteps"></div>
+
+        <section class="card step comparison-step" data-title="4種類の比較" data-kind="form">
+          <div class="section-kicker">06</div>
+          <h2>4種類の香りを比較した後</h2>
+          <div class="field-grid">
+            <label>作品に最も合っていた香り<select name="bestFit" required></select></label>
+            <label>作品の印象を最も変化させた香り<select name="mostChanged" required></select></label>
+            <label>空間や場所を最も想像しやすかった香り<select name="bestSpace" required></select></label>
+            <label>個人的な記憶を最も思い出した香り<select name="bestMemory" required></select></label>
+            <label>最も違和感があった香り<select name="mostDiscomfort" required></select></label>
+            <label>
+              香りによって作品の見え方や意味が変わると感じましたか
+              <select name="experienceChanged" required>
+                <option value="">選択してください</option>
+                <option>強く感じた</option>
+                <option>少し感じた</option>
+                <option>あまり感じなかった</option>
+                <option>全く感じなかった</option>
+              </select>
+            </label>
+          </div>
+          <label>
+            最後に、香りによって作品体験が変化した点があれば自由に書いてください。
+            <textarea name="finalComment" rows="4"></textarea>
+          </label>
+        </section>
+
+        <section class="flow-controls">
+          <button class="secondary-button" id="prevStep" type="button">戻る</button>
+          <p id="stepHint" aria-live="polite">入力後、次へ進んでください。</p>
+          <button class="primary-button" id="nextStep" type="button">次へ</button>
+          <button class="primary-button" id="submitStep" type="submit">回答を送信する</button>
+        </section>
+      </form>
+
+      <dialog id="completeDialog">
+        <h2>送信が完了しました</h2>
+        <p>回答を保存しました。次の参加者に進めます。</p>
+        <div class="dialog-actions">
+          <button class="primary-button" type="button" onclick="window.location.reload()">新しい回答を始める</button>
+        </div>
+      </dialog>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
